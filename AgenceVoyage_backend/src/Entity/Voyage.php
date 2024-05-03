@@ -7,6 +7,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 #[ORM\Entity(repositoryClass: VoyageRepository::class)]
 class Voyage
@@ -14,18 +15,23 @@ class Voyage
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
+    #[Groups('api_voyage_index')]
     private ?int $id = null;
 
     #[ORM\Column(length: 150)]
+    #[Groups('api_voyage_index')]
     private ?string $nom = null;
 
     #[ORM\Column(type: Types::DATETIME_MUTABLE)]
+    #[Groups('api_voyage_index')]
     private ?\DateTimeInterface $dateDepart = null;
 
     #[ORM\Column(type: Types::DATETIME_MUTABLE)]
+    #[Groups('api_voyage_index')]
     private ?\DateTimeInterface $dateRetour = null;
 
     #[ORM\Column(length: 255, nullable: true)]
+    #[Groups('api_voyage_index')]
     private ?string $description = null;
 
     /**
