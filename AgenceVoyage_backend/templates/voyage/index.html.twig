@@ -1,6 +1,6 @@
 
 {% extends 'base.html.twig'%}
-<title>Voyage index</title>
+{# <title>Voyage index</title> #}
 
 {% block body %}
     <h1>Voyage index</h1>
@@ -25,7 +25,7 @@
                 <td>{{ voyage.dateRetour ? voyage.dateRetour|date('Y-m-d H:i:s') : '' }}</td>
                 <td>{{ voyage.description }}</td>
                 <td>
-                    <a href="{{ path('app_voyage_show', {'id': voyage.id}) }}">show</a>
+                    <a class="btn btn-primary"  href="{{ path('app_voyage_show', {'id': voyage.id}) }}">show</a>
                     <a href="{{ path('app_voyage_edit', {'id': voyage.id}) }}">edit</a>
                 </td>
             </tr>
