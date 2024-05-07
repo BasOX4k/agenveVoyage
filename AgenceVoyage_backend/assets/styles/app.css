@@ -1,3 +1,6 @@
 body {
-    background-color: skyblue;
+    background-image: radial-gradient(circle, #F4E4BA 0%, #AF4D98 100%);}    
+    
+    a:hover{
+   text-decoration: none   ;
 }

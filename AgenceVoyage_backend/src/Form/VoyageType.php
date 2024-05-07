@@ -26,16 +26,20 @@ class VoyageType extends AbstractType
             ->add('description')
             ->add('Categorie', EntityType::class, [
                 'class' => Categorie::class,
-                'choice_label' => 'id',
+                'choice_label' => 'pays',
                 'multiple' => true,
+                'choice_label' => 'evenement',
+                'multiple' => true,
+                
             ])
+            // ->add('evenement')
             ->add('user', EntityType::class, [
                 'class' => User::class,
-                'choice_label' => 'id',
+                'choice_label' => 'nom',
             ])
             ->add('destination', EntityType::class, [
                 'class' => Destination::class,
-                'choice_label' => 'id',
+                'choice_label' => 'nom',
             ])
         ;
     }

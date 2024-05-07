@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\User;
 use App\Entity\Voyage;
 use App\Form\VoyageType;
 use App\Repository\VoyageRepository;
@@ -10,6 +11,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 #[Route('/voyage')]
 class VoyageController extends AbstractController
@@ -51,8 +53,15 @@ class VoyageController extends AbstractController
     }
 
     #[Route('/{id}/edit', name: 'app_voyage_edit', methods: ['GET', 'POST'])]
-    public function edit(Request $request, Voyage $voyage, EntityManagerInterface $entityManager): Response
+    public function edit(Request $request, Voyage $voyage, UserInterface $user, EntityManagerInterface $entityManager): Response
     {
+        if ($this->isGranted('ROLE_EDITOR') && !$this->isGranted('ROLE_ADMIN')) {
+            // Check if the trip does not belong to the current user
+            if ($voyage->getUser() !== $user) {
+                $this->addFlash('error', 'You are not allowed to edit this trip.');
+                return $this->redirectToRoute('app_voyage_index');
+            }
+        }
         $form = $this->createForm(VoyageType::class, $voyage);
         $form->handleRequest($request);
 
@@ -69,9 +78,16 @@ class VoyageController extends AbstractController
     }
 
     #[Route('/{id}', name: 'app_voyage_delete', methods: ['POST'])]
-    public function delete(Request $request, Voyage $voyage, EntityManagerInterface $entityManager): Response
+    public function delete(Request $request, Voyage $voyage, UserInterface $user, EntityManagerInterface $entityManager): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$voyage->getId(), $request->getPayload()->get('_token'))) {
+        if (
+            $this->isGranted('ROLE_EDITOR') && !$this->isGranted('ROLE_ADMIN')) {
+                // Check if the trip does not belong to the current user
+                if ($voyage->getUser() !== $user) {
+                    $this->addFlash('error', 'You are not allowed to delete this trip.');
+                    return $this->redirectToRoute('app_voyage_index');
+                }
+            }$this->isCsrfTokenValid('delete'.$voyage->getId(), $request->getPayload()->get('_token')); {
             $entityManager->remove($voyage);
             $entityManager->flush();
         }

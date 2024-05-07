@@ -23,8 +23,8 @@
                 <td>{{ categorie.evenement }}</td>
                 <td>{{ categorie.duree ? categorie.duree|date('Y-m-d H:i:s') : '' }}</td>
                 <td>
-                    <a href="{{ path('app_categorie_show', {'id': categorie.id}) }}">show</a>
-                    <a href="{{ path('app_categorie_edit', {'id': categorie.id}) }}">edit</a>
+                    <a class="btn btn-primary" href="{{ path('app_categorie_show', {'id': categorie.id}) }}">Show</a>
+                    <a class="btn btn-warning" href="{{ path('app_categorie_edit', {'id': categorie.id}) }}">Edit</a>
                 </td>
             </tr>
         {% else %}
@@ -35,5 +35,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('app_categorie_new') }}">Create new</a>
+    <a class="btn btn-info" href="{{ path('app_categorie_new') }}">Create new</a>
 {% endblock %}
