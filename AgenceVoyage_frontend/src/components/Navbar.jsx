@@ -1,27 +1,28 @@
 import Link from "next/link"
+import "./navbar.css";
 
 export default function Navbar() {
     const brand = "EnjoyFest"
 
     return (
-        <div className="navbar">
+        <div className="navbar navbar-expand-lg bg-body-tertiary">
             <Link href='/' className='logo'>
                 {brand}
             </Link>
             <nav>
-                <ul className="naviagation">
+                <ul className="navigation">
                     <li>
-                        Accueil
+                        <Link href="/">Accueil</Link>
                     </li>
                     <li>
-                        Destination
+                    <Link href="/voyage">Voyage</Link>
                     </li>
                     <li>
-                        Contact
+                    <Link href="/destination/contact">Contact</Link>
                     </li>
 
                 </ul>
             </nav>
         </div>
-    )
+    );
 }
