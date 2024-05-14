@@ -24,6 +24,7 @@
                 <th>DateRetour</th>
                 <th>Description</th>
                 <th>actions</th>
+                
             </tr>
         </thead>
         <tbody>
@@ -34,6 +35,7 @@
                 <td>{{ voyage.dateDepart ? voyage.dateDepart|date('Y-m-d H:i:s') : '' }}</td>
                 <td>{{ voyage.dateRetour ? voyage.dateRetour|date('Y-m-d H:i:s') : '' }}</td>
                 <td>{{ voyage.description }}</td>
+                <td>{{ voyage.image }}</td>
                 <td>
                     <a class="btn btn-primary"  href="{{ path('app_voyage_show', {'id': voyage.id}) }}">Show</a>
                     <a class="btn btn-warning" href="{{ path('app_voyage_edit', {'id': voyage.id}) }}">Edit</a>

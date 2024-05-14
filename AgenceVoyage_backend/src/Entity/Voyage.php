@@ -38,6 +38,7 @@ class Voyage
      * @var Collection<int, Categorie>
      */
     #[ORM\ManyToMany(targetEntity: Categorie::class, inversedBy: 'voyages')]
+    #[Groups('api_voyage_index')]
     private Collection $Categorie;
 
     #[ORM\ManyToOne(inversedBy: 'Voyage')]
@@ -52,6 +53,10 @@ class Voyage
      */
     #[ORM\OneToMany(targetEntity: Reservation::class, mappedBy: 'voyage')]
     private Collection $Reservation;
+
+    #[ORM\Column(length: 255)]
+    #[Groups('api_voyage_index')]
+    private ?string $image = null;
 
     public function __construct()
     {
@@ -186,6 +191,18 @@ class Voyage
                 $reservation->setVoyage(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getImage(): ?string
+    {
+        return $this->image;
+    }
+
+    public function setImage(string $image): static
+    {
+        $this->image = $image;
 
         return $this;
     }

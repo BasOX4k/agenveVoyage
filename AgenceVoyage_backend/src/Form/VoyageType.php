@@ -32,7 +32,7 @@ class VoyageType extends AbstractType
                 'multiple' => true,
                 
             ])
-            // ->add('evenement')
+            
             ->add('user', EntityType::class, [
                 'class' => User::class,
                 'choice_label' => 'nom',
@@ -41,6 +41,7 @@ class VoyageType extends AbstractType
                 'class' => Destination::class,
                 'choice_label' => 'nom',
             ])
+            ->add('image', null)
         ;
     }
 

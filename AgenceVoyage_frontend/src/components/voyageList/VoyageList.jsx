@@ -5,7 +5,7 @@ import VoyageCardTeaser from "../voyageCardTeaser/VoyageCardTeaser";
 
 
 export default function VoyageList(props) {
-    // const {voyages} = props
+    const {voyages} = props
     return (
         <div>
             {props.voyages && (
@@ -16,6 +16,8 @@ export default function VoyageList(props) {
                             <VoyageCardTeaser 
                             nom={voyage.nom}
                             description={voyage.description} 
+                            image={voyage.image}
+                            categorie={voyage.categorie}
                             />    
                         </li>
                         </Link>

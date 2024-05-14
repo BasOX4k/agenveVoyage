@@ -8,12 +8,12 @@
     border-radius: 10px;
     padding: 20px;
 
-    .voyage-card-information {
+    .voyage-card-description{
         display: flex;
         flex-direction: column;
         gap: 10px;
 
-        .voyage-card-name {
+        .voyage-card-nom {
             margin: 0;
             padding: 0;
             width: 250px;
@@ -23,5 +23,9 @@
             font-weight: bold;
             font-size: 32px;
         }
+        .voyageCardImage{
+            width: 250px;
+            height: 250px;
+        }
+        }
     }
-}

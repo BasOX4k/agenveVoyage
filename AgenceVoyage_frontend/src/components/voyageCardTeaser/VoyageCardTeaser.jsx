@@ -2,15 +2,17 @@
 import React from "react";
 import "./voyageCardTeaser.css"
 
-export default function VoyageCardTeaser(props) {
-    const {nom, description} = props;
+export default function VoyageCardTeaser({nom, description, image, categorie}) {
+    // const {nom, description, image} = props;
     return(
         <div className="voyage-card-teaser">
             
-            {/* <img src={props.image} alt={props.alt} /> */}
-            <h2>{nom}</h2>
-            <h3>{description}</h3>
+            <img src={image} alt={nom} width={250} height={250} border-radius={10}/>
+            <p>{nom}</p>
+            <p>{description}</p>
+            <p>{categorie}</p>
             {/* <p>{props.localisation}</p> */}
         </div>
+    );
 
-    );}
+}
