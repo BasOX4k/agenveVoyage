@@ -1,5 +1,5 @@
 "use client"
-
+import './page.css';
 import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import VoyageList from "@/components/voyageList/VoyageList";

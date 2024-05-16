@@ -19,4 +19,12 @@ class VoyageController extends AbstractController
             'groups' => 'api_voyage_index',
         ]);
     }
+    #[Route('/{id}', name: 'detail')]
+    public function detail(VoyageRepository $voyageRepository, $id): Response
+    {
+        $voyages = $voyageRepository->find($id);
+        return $this->json(data: $voyages, context: [
+            'groups' => 'api_voyage_index',
+        ]);
+    }
 }

@@ -6,19 +6,20 @@ export default function Navbar() {
 
     return (
         <div className="navbar navbar-expand-lg bg-body-tertiary">
-            <Link href='/' className='logo'>
+            <img href='/' className='logo' src="https://cdn.pixabay.com/photo/2017/11/16/09/13/monogram-2953821_1280.png"
+            alt="logo"/>
                 {brand}
-            </Link>
+            
             <nav>
                 <ul className="navigation">
                     <li>
-                        <Link href="/">Accueil</Link>
+                    <Link  className="nav-link active" href="/">Accueil</Link>
                     </li>
                     <li>
-                    <Link href="/voyage">Voyage</Link>
+                    <Link className="nav-link active" href="/voyage">Voyage</Link>
                     </li>
                     <li>
-                    <Link href="/destination/contact">Contact</Link>
+                    <Link className="nav-link active" href="/Contact">Contact</Link>
                     </li>
 
                 </ul>

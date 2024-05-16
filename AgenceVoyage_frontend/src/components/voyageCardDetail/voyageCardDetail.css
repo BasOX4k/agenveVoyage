@@ -1,0 +1,50 @@
+.voyage-card-teaser-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: max-content;
+  height: max-content;
+  border: 1px solid grey;
+  box-shadow: 10px 10px 5px lightblue;
+  border-radius: 15px;
+  
+}
+.voyage-card-detail {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 30px;
+
+}
+.voyage-card-image-detail {
+  width: 550px;
+  height: 550px;
+  border-radius: 15px 15px 15px 15px;
+}
+.voyage-card-localisation {
+  margin: 0;
+  padding: 0;
+  width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+ 
+.voyage-card-nom {
+  margin: 0;
+  padding: 0;
+  width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: bold;
+  font-size: 32px;
+}
+.voyage-card-description {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
