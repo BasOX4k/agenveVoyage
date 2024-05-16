@@ -11,18 +11,24 @@ Il sera nécéssaire d'avoir :
 
 ## Instruction
 Ne pas oublier de modifier le dossier .env du back pour qu'il corresponde à votre base de données :
-- DATABASE_URL="mysql://app:!ChangeMe!@127.0.0.1:3306/app?serverVersion=8.0.32&charset=utf8mb4"
+- ``DATABASE_URL="mysql://app:!ChangeMe!@127.0.0.1:3306/app?serverVersion=8.0.32&charset=utf8mb4``
 
-Pour démarer le serveur de NextJs, taper la commande:
+Pour démarrer le serveur de NextJs, taper la commande:
 
 ```npm run dev```
 
-Ensuite rendez vous sur http://localhost:3000 à l'aide votre navigateur pour afficher les résultats.
+Pour démarrer le serveur de Symfony, il faudra taper dans le terminal: 
+``symfony server:start``
+
+Ensuite rendez vous sur ``http://localhost:3000`` à l'aide votre navigateur pour afficher les résultats de NextJs et rendez vous sur ``(http://127.0.0.1:8000/)`` pour afficher les résultats de Symfony.
+
 
 ## Route API
--- /api/voyages/ - GET - Permet de récupérer les données des voyages qui été crées dans le back et les affiches dans le navigateur.
+-- ```/api/voyages/``` - GET - Permet de récupérer les données des voyages qui été crées dans le back et les affiches dans le navigateur.
 
--- /api/voyages/id - GET -  Permet de voir les détails d'un voyage en récupérant l'id du dit voyage dans le back.
+-- ```/api/voyages/id``` - GET -  Permet de voir les détails d'un voyage en récupérant l'id du dit voyage dans le back.
+
+
 
 
   
