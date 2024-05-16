@@ -11,7 +11,7 @@ Il sera nécéssaire d'avoir :
 
 ## Instruction
 Ne pas oublier de modifier le dossier .env du back pour qu'il corresponde à votre base de données 
---# DATABASE_URL="mysql://app:!ChangeMe!@127.0.0.1:3306/app?serverVersion=8.0.32&charset=utf8mb4"--
+-# DATABASE_URL="mysql://app:!ChangeMe!@127.0.0.1:3306/app?serverVersion=8.0.32&charset=utf8mb4"
 
 Pour démarer le serveur de NextJs, taper la commande:
 
