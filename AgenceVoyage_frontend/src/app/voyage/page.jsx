@@ -31,7 +31,6 @@ export default function Voyage() {
     return (
         <>
         <Navbar />
-        <p>Page Voyage</p>
 
         {/* Afficher la liste des destinations */}
         {loading && !error && <div>Loading...</div>}

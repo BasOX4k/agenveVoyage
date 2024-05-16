@@ -4,4 +4,7 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 40px;
+    background-color:#DAD4C2 ;
+    box-shadow: #4C5684;
+    
 }

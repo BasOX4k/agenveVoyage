@@ -4,7 +4,6 @@ namespace App\Form;
 
 use App\Entity\Categorie;
 use App\Entity\Destination;
-use App\Entity\User;
 use App\Entity\Voyage;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
@@ -32,10 +31,6 @@ class VoyageType extends AbstractType
                 'multiple' => true,
                 
             ])
-            
-            // ->add('user', EntityType::class, [
-            //     'class' => User::class,
-            //     'choice_label' => 'nom',
         
             ->add('destination', EntityType::class, [
                 'class' => Destination::class,

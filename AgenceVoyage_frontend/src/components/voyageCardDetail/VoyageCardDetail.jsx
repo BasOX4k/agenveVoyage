@@ -5,7 +5,7 @@ import "./voyageCardDetail.css";
 export default function VoyageCardDetail({ nom, description, image, dateDepart }) {
   // const {nom, description} = props
   return (
-    <div className="voyage-card-detail m-3 d-flex  ">
+    <div className="voyage-card-detail d-flex  ">
       <div>
       <div
           className="voyage-card-image-detail"
@@ -15,7 +15,7 @@ export default function VoyageCardDetail({ nom, description, image, dateDepart }
         ></div>
         <p className="voyage-card-nom">{nom}</p>
         <p>{dateDepart}</p>
-        <p className="voyage-card-description">{description}</p>
+        <p className="voyage-card-description-detail">{description}</p>
 
         
       </div>

@@ -5,9 +5,9 @@ export default function Home() {
   
   
   return (
-    <main>
+    <div>
       <Navbar />
-    </main>
+    </div>
     
   );
 }

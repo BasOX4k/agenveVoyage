@@ -8,26 +8,30 @@
   box-shadow: 10px 10px 5px lightblue;
   border-radius: 15px;
   
+  
 }
 .voyage-card-detail {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   gap: 30px;
+  background-color: lightcyan;
 
 }
 .voyage-card-image-detail {
   width: 550px;
-  height: 550px;
+  height: 350px;
   border-radius: 15px 15px 15px 15px;
+  
 }
-.voyage-card-localisation {
+.voyage-card-localisation-detail {
   margin: 0;
   padding: 0;
   width: 250px;
-  overflow: hidden;
+  /* overflow: hidden; */
   text-overflow: ellipsis;
-  white-space: nowrap;
+  /* white-space: nowrap; */
+
   font-weight: bold;
   font-size: 32px;
 }

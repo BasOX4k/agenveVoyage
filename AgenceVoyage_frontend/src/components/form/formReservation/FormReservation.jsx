@@ -3,8 +3,8 @@ import './formReservation.css'
 export default function FormReservation(){
 return(
 <form className="form">
-    <p className="title">Réservation </p>
-    <p className="message">Veuillez remplir ce formulaire </p>
+    <p className="title">Contact </p>
+    <p className="message">Veuillez remplir ce formulaire afin de prendre contact avec l'agence. ;-) </p>
         <div className="flex">
         <label>
             <input className="input" type="text" placeholder="" required=""/>

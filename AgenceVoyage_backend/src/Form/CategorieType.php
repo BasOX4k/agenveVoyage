@@ -16,14 +16,6 @@ class CategorieType extends AbstractType
         $builder
             ->add('pays')
             ->add('evenement')
-            // ->add('duree', null, [
-            //     'widget' => 'single_text',
-            
-            // ->add('voyages', EntityType::class, [
-            //     'class' => Voyage::class,
-            //     'choice_label' => 'id',
-            //     'multiple' => true,
-        
         ;
     }
 

@@ -6,10 +6,9 @@ export default function Navbar() {
 
     return (
         <div className="navbar navbar-expand-lg bg-body-tertiary">
-            <img href='/' className='logo' src="https://cdn.pixabay.com/photo/2017/11/16/09/13/monogram-2953821_1280.png"
-            alt="logo"/>
+            <Link href='/' className='logo nav-linkactive'>
                 {brand}
-            
+            </Link>
             <nav>
                 <ul className="navigation">
                     <li>
