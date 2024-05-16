@@ -10,12 +10,12 @@ Il sera nécéssaire d'avoir :
 - Symfony Version 7
 
 ## Instruction
-Ne pas oublier de modifier le dossier .env du back pour qu'il corresponde à votre base de données 
--# DATABASE_URL="mysql://app:!ChangeMe!@127.0.0.1:3306/app?serverVersion=8.0.32&charset=utf8mb4"
+Ne pas oublier de modifier le dossier .env du back pour qu'il corresponde à votre base de données :
+- DATABASE_URL="mysql://app:!ChangeMe!@127.0.0.1:3306/app?serverVersion=8.0.32&charset=utf8mb4"
 
 Pour démarer le serveur de NextJs, taper la commande:
 
-npm run dev
+```npm run dev```
 
 Ensuite rendez vous sur http://localhost:3000 à l'aide votre navigateur pour afficher les résultats.
 
